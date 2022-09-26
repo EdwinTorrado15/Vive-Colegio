@@ -7,10 +7,10 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Inicio/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/categoria' element={<Categoria/>}/>
-        <Route path='/estudiante' element={<Estudiante/>}/>
+        <Route path='/Vive-Colegio/' element={<Inicio/>}/>
+        <Route path='/Vive-Colegio/login' element={<Login/>}/>
+        <Route path='/Vive-Colegio/categoria' element={<Categoria/>}/>
+        <Route path='/Vive-Colegio/estudiante' element={<Estudiante/>}/>
       </Routes>
 
     </div>

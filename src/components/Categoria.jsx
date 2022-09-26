@@ -20,7 +20,7 @@ const Categoria = () => {
         <h1 className="text-white font-bold text-[40px] text-center drop-shadow-3xl">Hola, Edwin!! Elige a que catgoria perteneces</h1>
         <div className="flex justify-center gap-5 pb-60 pt-20">
             <div className="w-52 h-48 drop-shadow-3xl">
-                <Link to={'/estudiante'}>
+                <Link to={'/Vive-Colegio/estudiante'}>
                 <img src={niño} alt="Categoria estudiante" className="object-cover w-full h-full rounded-full "/>
                 </Link>
                 <p className="text-center font-bold text-white text-[40px]">Estudiante</p>

@@ -26,7 +26,7 @@ const Inicio = () => {
             <p>La confianza genera esperanza.</p>
             <p>La esperanza genera paz.</p>
           </div>
-          <Link to={'/login'} className="border-2 border-light-orange text-light-orange text-2xl px-3 py-2 font-medium rounded-md hover:bg-light-orange hover:text-white transition duration-200">Iniciar sesion</Link>
+          <Link to={'/Vive-Colegio/login'} className="border-2 border-light-orange text-light-orange text-2xl px-3 py-2 font-medium rounded-md hover:bg-light-orange hover:text-white transition duration-200">Iniciar sesion</Link>
         </div>
         <Footer />
       </div>
