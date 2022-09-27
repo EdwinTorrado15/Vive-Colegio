@@ -1,39 +1,86 @@
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaTimes, FaBars } from "react-icons/fa";
 import ViveColegio from "../assets/img/ViveColegio.png";
-import styled from 'styled-components'
-import { linksNavbar } from "../data/datos";
+import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
-  let [open, setOpen] = useState(false);
+  const closeMenu = () => setClick(false);
   return (
-    <nav className="flex items-center justify-between bg-light-orange">
-      <span
-        className="fixed md:hidden right-5 text-white cursor-pointer z-20 "
-        onClick={() => setOpen(!open)}
-      >
-        {open ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </span>
-      <div className="py-5">
-        <img src={ViveColegio} alt="Logo Vive Colegio" className="w-10 ml-7 object-cover" />
-      </div>
-      <ul
-        className={` bg-light-orange md:pl-10 pr-28 md:static fixed duration-500 ease-linear top-0 md:h-auto h-screen z-10 ${
-          !open ? "right-[-100%]" : "right-0"
-        }`}
-      >
-        {linksNavbar.map((menu, index) => (
-          <li
-            key={index}
-            className="md:inline-block md:ml-10 ml-5 md:my-0 my-6 border-b-2 border-transparent hover:border-white duration-300"
-          >
-            <p className="text-white cursor-pointer font-Barlow font-normal text-sm inline-block md:py-5 py-3" />
-            <span className="font-bold text-white mr-1.5">{menu.nombre}</span>
+    <div className="header">
+      <nav className="navbar">
+        <Link
+          to="inicio"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="logo"
+        >
+          <img src={ViveColegio} alt="Logo" />
+        </Link>
+        <div className="hamburguer" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={30} style={{ color: "#ffffff" }} />
+          ) : (
+            <FaBars size={30} style={{ color: "#ffffff" }} />
+          )}
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link
+              to="inicio"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={closeMenu}
+            >
+              Inicio
+            </Link>
           </li>
-        ))}
-      </ul>
-    </nav>
+          <li className="nav-item">
+            <Link
+              to="cuidadoDeSi"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={closeMenu}
+            >
+              Cuidado de si
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="manejoEmociones"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={closeMenu}
+            >
+              Manejo de emociones
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              to="generandoVinculos"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              onClick={closeMenu}
+            >
+              Generando vínculos
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

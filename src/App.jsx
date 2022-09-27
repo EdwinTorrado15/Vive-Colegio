@@ -1,6 +1,6 @@
 import { Routes,Route } from 'react-router-dom'
 import {Inicio,Login,Categoria} from './components';
-import {Estudiante} from './pages';
+import Pagina from './components/Pagina';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
         <Route path='/Vive-Colegio/' element={<Inicio/>}/>
         <Route path='/Vive-Colegio/login' element={<Login/>}/>
         <Route path='/Vive-Colegio/categoria' element={<Categoria/>}/>
-        <Route path='/Vive-Colegio/estudiante' element={<Estudiante/>}/>
+        <Route path='/Vive-Colegio/estudiante/*' element={<Pagina/>}/>
       </Routes>
 
     </div>

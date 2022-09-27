@@ -6,9 +6,9 @@ import {
 
 import slider1 from "../assets/img/slider1.jpg";
 import slider2 from "../assets/img/slider2.jpg";
-import profesora from "../assets/img/profesora.jpg";
+import slider3 from "../assets/img/slider3.jpg";
 
-const sliders = [slider1, slider2, profesora];
+const sliders = [slider1, slider2, slider3];
 
 let count = 0;
 let slideInterval;
